@@ -4,8 +4,11 @@ object TagUtils {
     private const val tagRegex = "(?<!\\S)(@[^@]*?)(?=[ .?,!]|\$)"
 
     fun colorText(text: String): String {
+        val pl = MischiefPings.pl
         return Regex(tagRegex).replace(text){
-            "§2${it.value}§r"
+            val p = pl.server.getPlayerExact(it.value.removePrefix("@"))
+            if(p == null) it.value
+            else "§2${it.value}§r"
         }
     }
 
