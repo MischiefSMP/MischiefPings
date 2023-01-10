@@ -19,6 +19,5 @@ class ChatListener: Listener {
             it.sendTitle("Ping!", "You've been pinged by §1${event.player.name}.", 1, 40, 1)
         }
         event.message = TagUtils.colorText(event.message)
-        event.format
     }
 }
