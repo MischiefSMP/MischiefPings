@@ -1,0 +1,6 @@
+name: MischiefPings
+version: $version
+author: sven@wollinger.email
+main: com.mischiefsmp.pings.MischiefPings
+api-version: 1.19
+website: wollinger.io
